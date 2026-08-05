@@ -1,0 +1,13 @@
+{
+	"Name": "[Si] Si's Simple Essentials Farm",
+	"Author": "Si",
+	"Description": "A simple farm map.",
+	"Version": "1.0.0",
+	"UniqueID": "Si.SEF",
+	"UpdateKeys": [ "Nexus:" ],
+	"ContentPackFor": {
+		"UniqueID": "Pathoschild.ContentPatcher"
+	},
+	// "Dependencies": [
+	// ]
+}

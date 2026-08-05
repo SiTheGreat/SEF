@@ -1,0 +1,68 @@
+Use farm_ranching as an example
+
+Best to copy it over and keep 'untitled tile sheet' as is - does game look for it?
+
+Required items
+-farmhouse
+-mailbox
+-shipping bin
+-spouse patio
+-shrine
+-warp totem
+-pet bowl
+-greenhouse
+-path to bus stop
+-path to backwoods
+-path to forest
+-farm cave entrance
+
+Tile properties backlayer
+NPCBarrier keeps npcs off the farm
+NoSpawn All to avoid debris/trees spawning
+Buildable F to keep certain areas unbuildable like in front of patio
+
+Set in tileset props
+Diggable
+Type Dirt
+
+Tile properties pathslayer
+Order sets where cabins go in multiplayer
+
+Map properties
+AllowGrassSurviveInWinter T/F
+BackwoodsEntry tile player arrives on when entering from backwoods
+BrookSounds see Audio in modding:maps
+BusStopEntry see backwoods but bus stop
+FarmCaveEntry see backwoods but farm cave
+FarmHouseEntry tile you stand on when exiting the house; for typical 9x6, from the top left tile this will be at the fifth row down, sixth column to the right (in other words, take the coords of your top left tile, and add 5 to the first number and 4 to the second)
+FarmHouseFlooring for starting farmhouse, see farmhouse interior in modding:maps
+FarmHouseFurniture see above
+FarmHouseStarterGift see above
+FarmHouseStarterSeedsPosition see above
+FarmHouseWallpaper see above
+ForestEntry see backwoods but bus stop
+GrandpaShrineLocation middle tile of the shrine, where the diamond goes
+GreenhouseLocation top left corner tile of the greenhouse (gh is 7x6 tiles plus 3x2 at the front)
+MailboxLocation base of mailbox default location - also needs to be patched, see modding:maps
+Outdoors T
+PetBowlLocation top left tile of 2x2 pet bowl
+ShippingBinLocation top left tile of 2x2 shipping bin
+SpouseAreaLocation top left tile of 4x4 patio
+Warp for warps to bus stop/forest/backwoods/farm cave
+WarpTotemEntry tile you stand on when arriving via warp totem
+
+Icons for farm selection and world map
+
+Fishing/Artifacts
+Add via location data
+
+Spawn monsters and grass on new year and wild/fruit trees
+
+Spawn farm buildings and machines
+
+Standard farmhouse size
+Floor tiles are 1,4 to 10,10
+Wall tiles are 1,1 to 10,3
+
+For wallpaper count how many single-tile columns it is from start (don't forget index zero)
+For flooring count how many double-tile columns it is from start (bc flooring is 2x2) (don't forget index zero)

@@ -1,0 +1,130 @@
+{
+	"Format": "2.9.0",
+
+	"ConfigSchema": {
+
+		"GreenRainDebris": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Description": "When disabled, green rain trees and weeds won't spawn on the farm during green rain days."
+		},
+	},
+	
+	"Changes": [
+
+		// Load assets
+		{
+			"Action": "Load",
+			"Target": "Mods/{{ModId}}/icon",
+			"FromFile": "assets/farm_icon.png",
+		},
+		{
+			"Action": "Load",
+			"Target": "Maps/{{ModId}}_Farm",
+			"FromFile": "assets/Farm.tmx",
+		},
+		// Not loading farm world map for now
+
+		// Load strings
+		{
+			"Action": "EditData",
+			"Target": "Strings/UI",
+			"Entries": {
+				"{{ModId}}_Farm": "{{i18n:Si.SEF.name}}_{{i18n:Si.SEF.descrip}}",
+			},
+		},
+
+		// Add farm
+		{
+			"Action": "EditData",
+			"Target": "Data/AdditionalFarms",
+			"Entries": {
+				"{{ModId}}_Farm": {
+					"Id": "{{ModId}}_Farm",
+					"TooltipStringPath": "Strings/UI:{{ModId}}_Farm",
+					"MapName": "{{ModId}}_Farm",
+					"IconTexture": "Mods/{{ModId}}/icon",
+					// "WorldMapTexture": "", // Meh for now
+				},
+			},
+		},
+
+		// Add location data
+		{
+			"Action": "EditData",
+			"Target": "Data/Locations",
+			"Entries": {
+				"Farm_{{ModId}}_Farm": {
+					"DisplayName": "[LocalizedText Strings\\StringsFromCSFiles:MapPage.cs.11064 [EscapedText [FarmName]]]",
+					"DefaultArrivalTile": {"X": 64, "Y": 15},
+					"CanHaveGreenRainSpawns": "{{GreenRainDebris}}",
+					// Crab pot data
+					"FishAreas": {
+						"Ponds": {
+							"CrabPotFishTypes": [ "freshwater" ],
+						},
+					},
+					// Fish data
+					"Fish": [
+						{
+							"Id": "LOCATION_FISH Mountain BOBBER_X BOBBER_Y WATER_DEPTH",
+							"ItemId": "LOCATION_FISH Mountain BOBBER_X BOBBER_Y WATER_DEPTH",
+							"Chance": 0.8,
+							"ApplyDailyLuck": true,
+						},
+					],
+					// Artifact data
+					"ArtifactSpots": [
+                        {
+                            "Id": "Coal",
+                            "ItemId": "(O)382",
+                            "Chance": 0.5,
+                            "MaxStack": 3
+                        },
+						{
+                            "Id": "MixedSeeds",
+                            "ItemId": "(O)770",
+                            "Chance": 0.1,
+                            "MaxStack": 2
+                        },
+						{
+                            "Id": "SpringSeeds",
+                            "ItemId": "(O)495",
+                            "Chance": 0.1,
+                            "MaxStack": 2,
+                            "Condition": "SEASON Spring",
+                        },
+                        {
+                            "Id": "SummerSeeds",
+                            "ItemId": "(O)496",
+                            "Chance": 0.1,
+                            "MaxStack": 2,
+                            "Condition": "SEASON Summer",
+                        },
+                        {
+                            "Id": "FallSeeds",
+                            "ItemId": "(O)497",
+                            "Chance": 0.1,
+                            "MaxStack": 2,
+                            "Condition": "SEASON Fall",
+                        },
+                        {
+                            "Id": "WinterSeeds",
+                            "ItemId": "(O)498",
+                            "Chance": 0.1,
+                            "MaxStack": 2,
+                            "Condition": "SEASON Winter",
+                        },
+						{
+                            "Id": "IridiumOre",
+                            "ItemId": "(O)386",
+                            "Chance": 0.05,
+                            "MaxStack": 1
+                        },
+					],
+				},
+			},
+		},
+
+	]
+}
