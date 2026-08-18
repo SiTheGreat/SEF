@@ -1,3 +1,6 @@
+set ponds and stumps as configurable
+figure out if SpawnForestFarmForage (/beach ver) is required for forage to spawn and what it defaults to if any
+
 Use farm_ranching as an example
 
 Best to copy it over and keep 'untitled tile sheet' as is - does game look for it?
