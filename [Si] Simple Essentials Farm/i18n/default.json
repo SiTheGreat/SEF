@@ -7,6 +7,8 @@
 	"config.Upperpond.description": "Toggles the upper pond.",
 	"config.Lowerpond.name": "Lowerpond",
 	"config.Lowerpond.description": "Toggles the lower pond.",
+	"config.Stumps.name": "Stumps",
+	"config.Stumps.description": "Toggles the daily stumps.",
 	"Si.SEF.name": "Simple Essentials Farm",
 	"Si.SEF.descrip": "A simple little farm with blue grass, hardwood stumps, and a small quarry.",
 }
