@@ -8,6 +8,24 @@
 			"Default": "true",
 			"Description": "When disabled, green rain trees and weeds won't spawn on the farm during green rain days."
 		},
+
+		"Minipond": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Description": "Toggles the miniature pond."
+		},
+
+		"Upperpond": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Description": "Toggles the upper pond."
+		},
+
+		"Lowerpond": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Description": "Toggles the lower pond."
+		},
 	},
 	
 	"Changes": [
@@ -23,6 +41,7 @@
 			"Target": "Maps/{{ModId}}_Farm",
 			"FromFile": "assets/Farm.tmx",
 		},
+
 		// Not loading farm world map for now
 
 		// Load strings
@@ -123,6 +142,41 @@
                         },
 					],
 				},
+			},
+		},
+
+		// Patch ponds
+
+		{
+			"Action": "EditMap",
+			"Target": "Maps/{{ModId}}_Farm",
+			"FromFile": "assets/minipond.tmx",
+			"ToArea": { "X": 39, "Y": 18, "Width": 5, "Height": 2 },
+			"PatchMode": "Replace",
+			"When": {
+				"Minipond": true,
+			},
+		},
+
+		{
+			"Action": "EditMap",
+			"Target": "Maps/{{ModId}}_Farm",
+			"FromFile": "assets/upperpond.tmx",
+			"ToArea": { "X": 5, "Y": 15, "Width": 10, "Height": 9 },
+			"PatchMode": "Replace",
+			"When": {
+				"Upperpond": true,
+			},
+		},
+
+		{
+			"Action": "EditMap",
+			"Target": "Maps/{{ModId}}_Farm",
+			"FromFile": "assets/lowerpond.tmx",
+			"ToArea": { "X": 4, "Y": 41, "Width": 6, "Height": 7 },
+			"PatchMode": "Replace",
+			"When": {
+				"Lowerpond": true,
 			},
 		},
 
