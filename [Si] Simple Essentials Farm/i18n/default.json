@@ -1,6 +1,12 @@
 {
 	"config.GreenRainDebris.name": "GreenRainDebris",
 	"config.GreenRainDebris.description": "When disabled, green rain trees and weeds won't spawn on the farm during green rain days.",
+	"config.Minipond.name": "Minipond",
+	"config.Minipond.description": "Toggles the miniature pond.",
+	"config.Upperpond.name": "Upperpond",
+	"config.Upperpond.description": "Toggles the upper pond.",
+	"config.Lowerpond.name": "Lowerpond",
+	"config.Lowerpond.description": "Toggles the lower pond.",
 	"Si.SEF.name": "Simple Essentials Farm",
 	"Si.SEF.descrip": "A simple little farm with blue grass, hardwood stumps, and a small quarry.",
 }
