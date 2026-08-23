@@ -18,6 +18,7 @@
   <property name="Outdoors" value="T"/>
   <property name="PetBowlLocation" value="43 6"/>
   <property name="ShippingBinLocation" value="61 14"/>
+  <property name="SpawnForestFarmForage" value="T"/>
   <property name="SpawnMountainFarmOreRect" value="54 45 11 3"/>
   <property name="SpouseAreaLocation" value="59 6"/>
   <property name="Stumps" value="36 44 3 39 44 3 42 44 3 45 44 3 48 44 3 37 46 3 40 46 3 43 46 3 46 46 3 49 46 3"/>
@@ -442,18 +443,21 @@
    <properties>
     <property name="Buildable" type="bool" value="true"/>
     <property name="Diggable" value="T"/>
+    <property name="Type" value="Grass"/>
    </properties>
   </tile>
   <tile id="277">
    <properties>
     <property name="Buildable" type="bool" value="true"/>
     <property name="Diggable" value="T"/>
+    <property name="Type" value="Grass"/>
    </properties>
   </tile>
   <tile id="278">
    <properties>
     <property name="Buildable" type="bool" value="true"/>
     <property name="Diggable" value="T"/>
+    <property name="Type" value="Grass"/>
    </properties>
   </tile>
   <tile id="279">
