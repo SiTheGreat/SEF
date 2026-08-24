@@ -15,6 +15,12 @@
 			"Description": "Toggles the daily stumps."
 		},
 
+		"Quarry": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Description": "Toggles the quarry."
+		},
+
 		"Minipond": {
 			"AllowValues": "true, false",
 			"Default": "true",
@@ -172,6 +178,30 @@
 			"PatchMode": "Overlay",
 			"When": {
 				"Stumps": true,
+			},
+		},
+
+		// Patch quarry
+
+		{
+			"Action": "EditMap",
+			"Target": "Maps/{{ModId}}_Farm",
+			"MapProperties": {
+				"SpawnMountainFarmOreRect": "54 45 11 3"
+			},
+			"When": {
+				"Quarry": true,
+			},
+		},
+
+		{
+			"Action": "EditMap",
+			"Target": "Maps/{{ModId}}_Farm",
+			"FromFile": "assets/quarry.tmx",
+			"ToArea": { "X": 52, "Y": 43, "Width": 15, "Height": 6 },
+			"PatchMode": "Overlay",
+			"When": {
+				"Quarry": true,
 			},
 		},
 
